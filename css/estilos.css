@@ -1,0 +1,19 @@
+@import url(./reset.css);
+@import url(./cabecalho.css);
+@import url(./corpo.css);
+@import url(./rodape.css);
+
+:root{
+    --fonte-principal:'Poppins';
+    --tamanho-fonte: '16px';
+    --cor-principal: #4A4A4A;
+    --cor-terciaria: #ffffff;
+}
+
+.corpo{
+    font-family: var(--fonte-principal);
+    font-size: var(--fonte-principal);
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: var(--cor-principal);
+}

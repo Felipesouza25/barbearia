@@ -1,0 +1,15 @@
+.rodape {
+    background: url(./img/cor-fundo-rodape.jpg);
+    height: 60px;
+    display: flex;
+    font-size: 18px;
+    
+}
+
+.rodape__copyright {
+    color: #cbcbcb;
+}
+
+.icone__rede-social{
+    width: 36px;
+}
