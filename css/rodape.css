@@ -1,13 +1,24 @@
 .rodape {
-    background: url(./img/cor-fundo-rodape.jpg);
+    background-image: url(../img/cor-fundo-rodape.jpg);
     height: 60px;
     display: flex;
     font-size: 18px;
-    
+    align-items: center;
+    justify-content: center;
 }
 
 .rodape__copyright {
     color: #cbcbcb;
+}
+
+.rodape__icones{
+    position: absolute;
+    right: 80px;
+}
+
+.rodape__lista-icones{
+    display: flex;
+    gap:24px;
 }
 
 .icone__rede-social{
