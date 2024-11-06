@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamento de Serviços</title>
+</head>
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+.back-button {
+ 
+    background-color: #4A4A4A;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    font-size: 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+ 
+    margin-left: 1%;
+ 
+}
+
+.back-button:hover {
+    background-color: #333;
+}
+
+
+header h1 {
+    margin: 0;
+    margin-left: 37%;
+}
+
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 5%;
+}
+
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.service {
+    background: #fff;
+    border: 2px solid #ddd; 
+    border-radius: 8px;
+    overflow: hidden;
+    flex: 1 1 calc(25% - 40px);
+    max-width: calc(25% - 40px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between; 
+    align-items: center; /* Alinha todos os itens ao centro */
+    text-align: center; /* Centraliza o texto */
+    padding: 20px; /* Adiciona preenchimento interno */
+}
+
+.service img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 10px; /* Adiciona espaço entre a imagem e o texto */
+}
+
+.service h2 {
+    font-size: 1.5em;
+    margin: 10px 0; /* Margem em cima e embaixo do título */
+}
+
+.service p {
+    margin: 0 0 10px; /* Remove a margem lateral */
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: auto; /* Empurra o botão para baixo */
+    background: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    text-align: center;
+}
+
+
+.btn:hover {
+    background: #555;
+}
+
+footer{
+    margin-top: 184px;
+    background: url(./img/cor-fundo-rodape.jpg);
+    width: 100%;
+    height: 60px;
+}
+
+.copyright{
+    position: absolute;
+    color: #cbcbcb;
+    font-family: 'Poppins', sans-serif;
+    /*font-size: 13px; */
+    margin-left: 50px;
+}
+
+.redes{
+    margin-left: 90%;
+}
+
+.icone_instagram{
+    position: absolute;
+    margin-top: 20px;
+    margin-left: -30px;
+    width: 24px;
+}
+
+.icone_whatsapp{
+    position: absolute;
+    margin-top: 19px;
+    margin-left: 13px;
+    width: 24px;
+}
+
+.facebook{
+    position: absolute;
+    width: 22px;
+}
+
+.itens_rodape--facebook{
+    position: absolute;
+    margin-top: 19px;
+    margin-left: 50px;
+} 
+
+.glow-on-hover {
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    padding: 10px;
+    padding-left: 1%;
+    padding-right: 1%;
+    margin-left: 1%;
+    text-decoration: none;
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ffffff, #000000, #ffffff, #000000, #ffffff, #000000, #ffffff, #000000, #ffffff);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: #000
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+</style>
+<body>
+    <header>
+        <a href="index.html" class="glow-on-hover">Voltar</a>
+        <h1>Agende Seu Serviço</h1>
+    </header>
+    <main>
+        <section class="services">
+            <article class="service">
+                <img src="./img/cabelo.png" alt="Corte de Cabelo"><br><br><br>
+                <h2>Corte de Cabelo</h2>
+                <p>Preço: R$ 50,00</p>
+                <a href="agendamento_cabelo.html" class="btn">Agendar</a>
+            </article>
+            
+            </article>
+            <article class="service">
+                <img src="./img/barba.png" alt="Barba">
+                <br><br><br>
+                <h2>Barba</h2>
+                <p>Preço: R$ 30,00</p>
+                <a href="agendamento_barba.html" class="btn">Agendar</a>
+            </article>
+            <article class="service">
+                <img src="./img/cabelo-barba.png"  width="150px">
+                <h2>Cabelo e Barba</h2>
+                <p>Preço: R$ 80,00</p>
+                <a href="corteebarba.html" class="btn">Agendar</a>
+            </article>
+            <article class="service">
+                <img src="./img/somb.png" alt="Sobrancelha">
+                <br><br><br>
+                <h2>Sobrancelha</h2>
+                <p>Preço: R$ 20,00</p>
+                <a href="agendamento_sobrancelha.html" class="btn">Agendar</a>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <p class="copyright">&copy; 2024 Barbearia Rodrigues. Todos os direitos reservados.<br>
+            Email: contato@barbeariarodrigues.com</p>
+        
+    <div class="redes">
+        <div class="itens_rodape--instagram">
+            <a href="https://www.instagram.com/gui.rodrigues.barber?igsh=dzZqeno4a3pscGJh"><img class="icone_instagram" src="./img/logo-instagram.png"></a>
+        </div>
+
+        <div class="itens_rodape--whatsapp">
+            <a href="https://api.whatsapp.com/send?phone=555514998794565"><img class="icone_whatsapp" src="./img/logo-whatsapp.png"></a>
+        </div>
+
+        <div class="itens_rodape--facebook">
+            <a href="https://www.facebook.com/gui.rodrigues.54584982?mibextid=LQQJ4d"><img class="facebook" src="./img/facebook.png"></a>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

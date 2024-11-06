@@ -1,0 +1,102 @@
+@import url(./css/cabecalho.css);
+
+body{
+    background: #4A4A4A;
+    font-family: 'Poppins', sans-serif;
+}
+
+.texto{
+    font-family: 'Sanchez';
+    text-align: justify;
+    font-size: 17px;
+    text-shadow: 1px 2px 4px black;
+    line-height: 22px;
+    margin-top: 10px;
+    margin-left: 16%;
+    margin-right: 16%;
+    padding: 5px;
+}
+
+.sobre{
+    padding-bottom: 1.5px;
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: bold;
+    text-shadow: 1px 2px 4px black;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 15px;
+    margin-top: 80px;
+    text-align: center;
+}
+
+p{
+    color: #ffffff;
+    text-align: center;
+}
+
+.titulo_principal{
+    padding-bottom: 1.5px;
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: bold;
+    text-shadow: 1px 2px 4px black;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 80px;
+    text-align: center;
+}
+
+.mapa_conteudo{
+    margin: 0 auto;
+    padding-top: 30px;
+    width: 87%;
+}
+
+footer{
+    margin-top: 80px;
+    background: url(./img/cor-fundo-rodape.jpg);
+    width: 100%;
+    height: 60px;
+}
+
+.copyright{
+    position: absolute;
+    color: #cbcbcb;
+    font-size: 13px;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 25px;
+    margin-left: 50px;
+}
+
+.redes{
+    margin-left: 90%;
+}
+
+.icone_instagram{
+    position: absolute;
+    margin-top: 20px;
+    margin-left: -30px;
+    width: 24px;
+}
+
+.icone_whatsapp{
+    position: absolute;
+    margin-top: 19px;
+    margin-left: 13px;
+    width: 24px;
+}
+
+.facebook{
+    position: absolute;
+    width: 22px;
+}
+
+.itens_rodape--facebook{
+    position: absolute;
+    margin-top: 19px;
+    margin-left: 50px;
+}   
+
+i{
+    color: #ffffff;
+}
+

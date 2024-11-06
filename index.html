@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sanchez&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./fontawesome/css/all.css">
+
+    <link rel="stylesheet" href="./css/estilos.css">
+
+    <title>Barbearia Rodrigues</title>
+</head>
+
+<body class="corpo">
+    <header class="cabecalho">
+        <nav>
+            <a href="servico.html" class="cabecalho__btn">Agende seu horario</a>
+        </nav>
+    </header>
+
+    <main class="principal">
+        
+        <section>
+            <div class="content">
+
+                <div class="slides">
+    
+                    <input class="input" type="radio" name="slide" id="slide1" checked>
+                    <input class="input" type="radio" name="slide" id="slide2">
+                    <input class="input" type="radio" name="slide" id="slide3">
+                    <input class="input" type="radio" name="slide" id="slide4">
+                    <input class="input" type="radio" name="slide" id="slide5">
+    
+    
+                    <div class="slide s1">
+                        <img src="img/gui.png" alt="">
+                    </div>
+    
+                    <div class="slide">
+                        <img src="img/2.png" alt="">
+                    </div>
+    
+                    <div class="slide">
+                        <img src="img/3.png" alt="">
+                    </div>
+    
+                    <div class="slide">
+                        <img src="img/4.png" alt="">
+                    </div>
+    
+                    <div class="slide">
+                        <img src="img/5.png" alt="">
+                    </div>
+                </div>
+            </div>
+    
+            <div class="navigation">
+    
+                <label class="bar" for="slide1"></label>
+                <label class="bar" for="slide2"></label>
+                <label class="bar" for="slide3"></label>
+                <label class="bar" for="slide4"></label>
+                <label class="bar" for="slide5"></label>
+    
+            </div>
+        </section>
+
+
+
+        <section class="mapa">
+            <h3 class="titulo_principal"> Nosso estabelecimento <i class="fa-solid fa-location-dot fa-1x"></i></h3><br>
+            <P>Nosso estabelecimento está localizado no coração da cidade.</P>
+            <div class="mapa_conteudo">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3693.72309571416!2d-49.67151552392213!3d-22.212627213433308!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94bfb8eb61c36b15%3A0x6bf55f7363aa4ea3!2sR.%20%C3%82ngelo%20Delicato%2C%2069%20-%20Gar%C3%A7a%2C%20SP%2C%2017400-000!5e0!3m2!1spt-BR!2sbr!4v1724702070382!5m2!1spt-BR!2sbr"
+                    width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <p class="rodape__copyright">&copy; 2024 Barbearia Rodrigues. Todos os direitos reservados.<br>
+            Email: contato@barbeariarodrigues.com</p>
+
+        <section class="rodape__icones">
+            <ul class="rodape__lista-icones">
+                <li class="rodape__icones-item"><a href="https://www.instagram.com/gui.rodrigues.barber?igsh=dzZqeno4a3pscGJh"><img
+                    class="icone__rede-social" src="./img/logo-instagram.png"></a></li>
+                    <li class="rodape__icones-item"><a href="https://api.whatsapp.com/send?phone=555514998794565"><img class="icone__rede-social"
+                        src="./img/logo-whatsapp.png"></a></li>
+                    <li class="rodape__icones-item"><a href="https://www.facebook.com/gui.rodrigues.54584982?mibextid=LQQJ4d"><img class="icone__rede-social"
+                        src="./img/facebook.png"></a></li>
+            </ul>
+        </section>
+    </footer>
+    <script>
+        let contador = 1;
+    
+        setInterval(function () {
+            document.getElementById('slide' + contador).checked = true;
+            contador++;
+    
+            if (contador > 5) {
+                contador = 1;
+            }
+        }, 2000);
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

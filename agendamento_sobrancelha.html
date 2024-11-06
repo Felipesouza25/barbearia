@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamento de Sobrancelha</title>
+    
+    
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #4A4A4A;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            box-sizing: border-box;
+            height: 100vh;
+            background-image: url(img/logoP.png);
+            background-repeat: no-repeat;
+            
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            color: white;
+            left: 0;
+            width: 100%;
+            padding: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+        }
+
+        .back-link {
+    color: #ffffff; /* Cor do texto */
+    text-decoration: none; /* Remove o sublinhado padrão */
+    font-size: 16px; /* Tamanho da fonte */
+    font-weight: bold; /* Fonte em negrito */
+    margin-right: auto; /* Margem à direita */
+    transition: color 0.3s; /* Transição suave para a cor */
+}
+
+.back-link:hover {
+    text-decoration: underline; /* Sublinha ao passar o mouse */
+    color: #cccccc; /* Muda a cor ao passar o mouse */
+}
+
+/* Removendo o quadrado cinza de foco */
+.back-link:focus {
+    outline: none; /* Remove o contorno padrão do foco */
+}
+
+
+
+
+        .container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 12px;
+            border: 2px solid #4A4A4A;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            width: 100%;
+            max-width: 400px;
+            box-sizing: border-box;
+            margin-top: 60px;
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: #4A4A4A;
+        }
+
+        label {
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #333;
+            display: block;
+        }
+
+        input[type="date"],
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        select {
+            margin-bottom: 15px;
+            padding: 12px;
+            font-size: 16px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            outline: none;
+            transition: border-color 0.3s;
+            background: #f9f9f9;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        input[type="date"]:focus,
+        select:focus {
+            border-color: #4A4A4A;
+        }
+
+        button {
+            background-color: #4A4A4A;
+            color: white;
+            border: none;
+            padding: 12px;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        button:hover {
+            background-color: #333;
+        }
+
+        /* Estilos do modal */
+        .modal {
+            display: none; /* Oculto por padrão */
+            position: fixed;
+            z-index: 1001;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Fundo escuro com transparência */
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background-color: rgba(255, 255, 255, 0.9); /* Fundo branco com leve transparência */
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #4A4A4A;
+            width: 90%; /* Largura menor */
+            max-width: 300px; /* Máximo de 300px */
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .agende{
+            color: white;
+            margin-right: 45%;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="servico.html" class="back-link">Voltar</a>
+         <h3 class="agende">Agendamento de Sobrancelha</h3>
+    </header><br><br>
+
+    <div class="container">
+        <h1>Marque seu horario!</h1>
+        <form id="appointment-form" onsubmit="openModal(event)">
+            <label for="date">Escolha a data:</label>
+            <input type="date" id="date" name="datas" required>
+        
+            <label for="time">Escolha o horário:</label>
+            <select id="time" name="horario" required>
+                <option value="09:00">09:00 às 10:00</option>
+                <option value="10:00">10:00 às 11:00</option>
+                <option value="11:00">11:00 às 12:00</option>
+                <option value="13:00">13:00 às 14:00</option>
+                <option value="14:00">14:00 às 15:00</option>
+                <option value="15:00">15:00 às 16:00</option>
+                <option value="16:00">16:00 às 17:00</option>
+                <option value="17:00">17:00 às 18:00</option>
+                <option value="18:00">18:00 às 19:00</option>
+                <option value="19:00">19:00 às 20:00</option>
+            </select>
+        
+            <button type="submit">Confirmar e Continuar</button>
+        </form>
+        
+    </div>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Confirmação de Dados</h2>
+            <form id="confirmation-form" action="config.php" method="post">
+                <input type="hidden" id="hidden-date" name="datas">
+                <input type="hidden" id="hidden-time" name="horario">
+                
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="nome" required>
+            
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+            
+                <label for="phone">Telefone:</label>
+                <input type="tel" id="phone" name="telefone" required>
+            
+                <button type="submit">Enviar</button>
+            </form>
+            
+        </div>
+    </div>
+
+
+    <script>
+        function openModal(event) {
+            event.preventDefault(); // Impede o envio do formulário
+            document.getElementById('modal').style.display = 'flex'; // Exibe o modal
+        }
+
+        function closeModal() {
+            document.getElementById('modal').style.display = 'none'; // Fecha o modal
+        }
+
+        // Fecha o modal se o usuário clicar fora dele
+        window.onclick = function(event) {
+            const modal = document.getElementById('modal');
+            if (event.target === modal) {
+                closeModal();
+            }
+        }
+
+
+
+        function openModal(event) {
+    event.preventDefault(); // Impede o envio do formulário
+    document.getElementById('hidden-date').value = document.getElementById('date').value;
+    
+    // Adicionando os segundos ao horário
+    let selectedTime = document.getElementById('time').value;
+    document.getElementById('hidden-time').value = selectedTime + ':00'; // Adiciona ":00" para o formato HH:MM:SS
+
+    document.getElementById('modal').style.display = 'flex'; // Exibe o modal
+}
+    </script>
+
+</body>
+</html>
+
+
